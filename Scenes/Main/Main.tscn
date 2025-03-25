@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://14f16cb4nfr6"]
+
+[ext_resource type="FontFile" uid="uid://ca8yifs8xyuwu" path="res://Assets/fonts/LuckiestGuy-Regular.ttf" id="1_p8rbg"]
+[ext_resource type="PackedScene" uid="uid://vuacg0ox1gtj" path="res://Scenes/LevelButton/level_button.tscn" id="2_qtv3y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qtv3y"]
+font = ExtResource("1_p8rbg")
+font_size = 78
+font_color = Color(0.701961, 0.517647, 0.164706, 1)
+outline_size = 6
+outline_color = Color(0.701961, 0.372549, 0.164706, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.243137)
+shadow_offset = Vector2(5, 3)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.109804, 0.54902, 0.607843, 0.380392)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Memory Madness"
+label_settings = SubResource("LabelSettings_qtv3y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelButtons" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 12
+
+[node name="LevelButton" parent="VBoxContainer/LevelButtons" instance=ExtResource("2_qtv3y")]
+layout_mode = 2
+
+[node name="LevelButton2" parent="VBoxContainer/LevelButtons" instance=ExtResource("2_qtv3y")]
+layout_mode = 2
+level_number = 2
+
+[node name="LevelButton3" parent="VBoxContainer/LevelButtons" instance=ExtResource("2_qtv3y")]
+layout_mode = 2
+level_number = 3
+
+[node name="LevelButton4" parent="VBoxContainer/LevelButtons" instance=ExtResource("2_qtv3y")]
+layout_mode = 2
+level_number = 4
+
+[node name="LevelButton5" parent="VBoxContainer/LevelButtons" instance=ExtResource("2_qtv3y")]
+layout_mode = 2
+level_number = 5
+
+[node name="LevelButton6" parent="VBoxContainer/LevelButtons" instance=ExtResource("2_qtv3y")]
+layout_mode = 2
+level_number = 6
+
+[node name="Sprites" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
